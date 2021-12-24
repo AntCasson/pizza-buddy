@@ -1,0 +1,223 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+:root {
+    --light: hsla(72, 20%, 95%, 1);
+    --yellow: hsla(41, 100%, 51%, 1);
+    --green: hsla(150, 100%, 27%, 1);
+    --red: hsla(357, 72%, 47%, 1);
+    --dark: hsla(154, 89%, 4%, 1);
+}
+
+/*  MAIN SITE CSS*/
+
+body {
+    background-color: var(--light);
+    font-family: 'Poppins', sans-serif
+}
+
+header h1 {
+    margin: 0 auto;
+    background-color: var(--green);
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 4px -2px;
+}
+
+section {
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--red);
+}
+section.section__hero {
+    min-height: 95vh;
+    background: 
+    url("./images/pattern_triangles-18_1_9_0-0_95_2__f4f5f0_ffb005.png");
+    object-fit: cover;
+    background-color: var(--light);
+
+}
+
+section .hero-wrapper {
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 70%;
+    
+}
+
+section .hero-wrapper .hero--question {
+    margin-block: 1em;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+section .hero--question select {
+    margin-bottom: 2em;
+    padding: .5em 1em;
+}
+
+section .hero-wrapper .pie-amount {
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    place-items: center;
+}
+
+section .hero-wrapper button {
+    margin: 0;
+    background: url("./images/whole-pizza.svg") center;
+    background-color: var(--light);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: none;
+    margin: .3em;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 4px -2px;
+    cursor: pointer;
+}
+
+section .hero-wrapper button:hover,
+section .hero-wrapper button:focus {
+    background-color: var(--red);
+    color: var(--light);
+}
+
+.flag {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/flag.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 3.5rem;
+}
+
+section.section__what-size {
+    margin: 0 auto;
+    background-color: var(--yellow);
+    color: var(--light);
+}
+
+section .what-size--question {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2em;
+}
+
+section.section__what-size .size-cards {
+    background-color: pink;
+    margin-inline: 2em ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark);
+}
+
+section.section__what-size .size-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+section .size-card .btn-size {
+    background-image: url("./images/flag.svg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 8rem;
+    padding: 2em;
+    text-align: center;
+    font-weight: 700;
+
+}
+section .size-card .btn-size:hover {
+    transform: scale(1.2);
+}
+
+section .size-card .btn-size p {
+    text-align: left;
+}
