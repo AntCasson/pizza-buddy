@@ -140,7 +140,8 @@ section .hero-wrapper {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 2em;    
+    padding: 2em;
+    padding-bottom: 1em;    
     align-content: center;
     justify-content: center;
 }
@@ -158,13 +159,11 @@ section .hero-wrapper .pizza-select {
 section.section__hero .pie-amount {
     margin: 0 auto;
     padding: 0;
-    border-radius: 10px;
-    border: none;
-    width: 5em;
-    height: 5rem;
+    border-radius: 50%;    
     text-align: center;
     font-size: 3em;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 4px -2px;
+    height: 3.1rem;
+    width: fit-content;
   }
 
 /* FLAG DIV */
@@ -209,38 +208,40 @@ section.section__what-size .size-cards {
 }
 
 section.section__what-size .size-card {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    display: grid;
     max-width: 5rem;
 }
 
 section .size-card .btn-size {
-    padding: 1em .5em;
-    background-image: url("./images/flag.svg");
-    background-size: cover;
-    border-radius: 10px;
-    border: none;
-    font-size: 1.4rem;
-    text-align: center;
-    font-weight: 700;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
-    transition: all .3s ease-in-out;
-
+  
+  padding: 1em .5em;
+  background-image: url("./images/flag.svg");
+  background-size: cover;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 }
+
 section .size-card .btn-size:hover,
 section .size-card .btn-size:focus {
-    transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 div.size-card p {
-  padding-top: .6em;  
+  padding-top: .6em;
+  transition: all .3s ease-in-out;  
+}
+section .size-card .btn-size:hover ~ p,
+section .size-card .btn-size:focus ~ p {
+  font-weight: 700; 
+  transform: scale(1.1);
 }
 
-div.size-card:hover, 
-div.size-card:focus {
-  font-weight: 700;  
-}
 
 section.section__what-size .size-card  p { 
   margin-top: .3em;
@@ -284,13 +285,14 @@ div.water-icon button {
   width: 4rem;
   border: none;
   filter: grayscale(100%);
-  
-  transition: filter .4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  cursor: pointer;  
+  transition: all .4s ease-out;
 }
 
 div.water-icon button:hover,
 div.water-icon button:focus {
   filter: grayscale(0);
+  transform: scale(1.2);
 }
 
 section.section__hydration .hydration-info{
@@ -305,20 +307,27 @@ section.section__hydration .hydration-info{
 /* TOTAL RECIPE SECTION*/
 
 section.section__total {
-  display: flex;
+  display: grid;
   padding: 2rem;
 }
 
 .section__total .recipe-total {
+  margin: 1em auto;
   background-color: var(--green);
-  height: 16rem;
-  width: 10rem;
   padding: 2rem;
   transform: rotate(-6deg);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
+  box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px, rgba(60, 64, 67, 0.2) 0px 2px 6px 2px; 
 }
 
 .section__total .recipe-total p {
-  /* transform: rotate(6deg); */
- 
+  padding: .5em;
+  color: var(--light);
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.section__total .recipe-total p span {
+ color: var(--yellow);
+ width: 1.5em;
 }
