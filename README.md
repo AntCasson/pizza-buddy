@@ -1,4 +1,4 @@
-# pizza-buddy
+# pizza-plotter
 Pizza dough ratio app
 
 
